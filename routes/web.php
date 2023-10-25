@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::get('/',  function () {
+    $message = "Hello Laravel";
+    return view('home', compact("message"));
 });
+Route::get('/about', function () {
+    $message = "Hello About";
+    return view('about', compact("message"));
+});
+/* $url = route('about');
+return redirect()->route('about');
+
+return to_route('about'); */
