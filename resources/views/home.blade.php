@@ -10,19 +10,24 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
 
 
 </head>
 
 <body class="antialiased">
-    <nav>
-        <div>
-            <a href="">About</a>
-            <a href="">Contact</a>
-        </div>
-    </nav>
-    <h1>Hello laravel</h1>
-    <h2>{{$message}}</h2>
+    <header>
+        <nav>
+            <div>
+                <a href="{{ route('about') }}">About</a>
+                <a href="{{ route('contact') }}">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Hello laravel</h1>
+        <h2>{{$message}}</h2>
+    </main>
 </body>
 
 </html>
